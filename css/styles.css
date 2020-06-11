@@ -1,0 +1,558 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100vw;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.85) 100%), url(../assets/IMG-20180910-WA0038.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+.nav-container {
+    background-color: black;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.nav-container img {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-container .menu-navigation {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-container .menu-navigation a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 21px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.712);
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.nav-container .menu-navigation a:hover {
+    color: red;
+   
+}
+
+/*menu icon*/
+.nav-container .menu-right {
+    top: 0;
+    right: 20px;
+    position: fixed;
+    display: none;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    z-index: 5;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.nav-container .menu-right i{
+   color: rgb(255, 255, 255);
+   font-size: 50px;
+   line-height: 80px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.header-container h1{
+    font-weight: 200;
+    font-size: 60px;
+}
+
+.header-container span{
+    color: red;
+    font-weight: 500;
+}
+
+.header-container p{
+    font-family: 'Dancing Script', cursive;
+    color: rgba(255, 255, 80, 0.603);
+    font-weight: 100;
+    font-size: 30px;
+}
+
+/*Menu Gallery*/
+
+.menu-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-container h2{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+.menu-container h2 span{
+    color: red;
+}
+
+.menu-container .gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 40px 0;
+
+}
+
+.menu-container .gallery img {
+    width: 30%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.menu-container .gallery img:hover {
+    cursor: pointer;
+
+}
+
+/*lightbox*/
+
+.imagen-light {
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+.show {
+    transform: translate(0%);
+}
+
+.add-image {
+    object-fit: cover;
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.show-image {
+    transform: scale(1);
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Procedure */
+
+.procedure {
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    font-weight: 300;
+    font-size: 35px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 40px 0;
+}
+
+.procedure h2 span {
+    color: red;
+  
+}
+
+.procedure-container {
+    width: 100%;
+    padding: 80px 20px 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.image-container {
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.image-container p {
+    font-size: 25px;
+    font-weight: 100;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+/*Our Products*/
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%), url(../assets/IMG-20180910-WA0022.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin-top: 50px;
+    padding-top: 100px;
+}
+
+.products .description {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.products .description img {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.75);
+}
+
+.products .description .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.products .description .center h3{
+    padding-bottom: 35px;
+}
+
+.products .description .center p{
+    text-align: justify;
+    font-size: 25px;
+}
+
+.products .subtitle {
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.603);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.products .subtitle span {
+    color: red;
+}
+
+.products .product {
+    width: 60%;
+    display: flex;
+    margin-bottom: 50px;
+    padding: 15px 15px 15px 15px;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01));
+    border-radius: 15px;
+
+}
+
+.products .product img {
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.75);
+}
+
+.product .crepe-description {
+    margin-left: 25px;
+}
+
+.products .product .crepe-description h4 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 25px;
+    color: rgba(255, 255, 80, 0.603);
+    margin-bottom: 10px;
+}
+
+.products .product .crepe-description p {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+/*Footer*/
+
+.footer-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-container img {
+    width: 200px;
+    height: 200px;
+}
+
+.footer-container h3 {
+    width: 50%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 40px;
+    color: white;
+}
+
+.footer-container h3 span {
+    color: red;
+}
+
+.footer-container .social-media h4 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 100;
+    font-size: 40px;
+    color: white;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+
+}
+.social-media-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(128, 0, 0);
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(128, 0, 0);
+    text-decoration: none;
+}
+
+.social-media-icons  a i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.social-media-icons a:hover {
+    background: red;
+    color: black;
+    transition: 0.5s ease-in-out;
+}
+
+
+hr {
+    color: rgba(0, 0, 0, 0.438);
+}
+
+@media screen and (max-width:1000px) {
+
+    .nav-container .menu-navigation {
+        position: fixed;
+        background: #000000ea; 
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: ease-in-out 0.5s;
+        clip-path: circle(0% at 100% 0);
+    }
+    
+    .nav-container .menuDos {
+        clip-path: circle(141.2% at 100% 0);
+    }
+
+    .nav-container .menu-navigation a {
+        width: 90%;
+        text-align: center;
+        font-size: 25px;
+    }
+
+   .nav-container .menu-right {
+        display: block;
+        z-index: 1;
+    }
+
+    .image-container {
+        width: 30%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /*Sobre nosotros*/
+
+    .products .description {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .products .description .center{
+        width: 70%;
+        padding: 50px 0 50px 0;
+    }
+
+    #bestSellers {
+        font-size: 40px;
+    }
+
+    .products .product {
+        width: 80%;
+    }
+    /*footer*/
+
+    footer .footer-container h3 {
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .header-container h1 {
+        font-size: 50px;
+    }
+    .header-container p {
+        font-size: 25px;
+    }
+    
+    .menu-container .gallery {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .menu-container .gallery img {
+        width: 75%;
+        margin-bottom: 40px;
+    }
+
+    .procedure-container .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    .products .product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .products .product img {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container h3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-container h1{
+        font-size: 35px;
+    }
+
+    .header-container p {
+        font-size: 20px;
+        width: 80%;
+    }
+
+    .products .description img {
+        width: 250px;
+        height: 150px;
+    }
+    .products .description center {
+        width: 100%;
+    }
+    .products .product img {
+        width: 220px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+}
